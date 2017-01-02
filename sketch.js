@@ -59,7 +59,7 @@ function setup() {
 	score_box = scl*floor(100/scl);
   //slider = createSlider(1,30,10);
   player = createInput('Player Name');
-  player.position(20, 40);
+  player.position(20, 20);
   player.size(300,50);
   createCanvas(score_box + scl*floor((windowWidth-100)/scl), score_box + scl*floor((windowHeight-100)/scl));
   s = new Snake();
@@ -98,22 +98,22 @@ function draw() {
   text('your Top Score: ',width/2+100,10);
   textAlign(LEFT,TOP);
   text(high_Score,width/2+100,10);
-  // AHMED HASSAN
-  fill(0, 128, 0);
-  textSize(10);
-  textAlign(RIGHT,BASELINE);
-  text('AHMED HASSAN, 1.1.2017' ,width-10,score_box-3);
+  /// AHMED HASSAN
+  //fill(0, 128, 0);
+  //textSize(10);
+  //textAlign(RIGHT,BASELINE);
+  //text('AHMED HASSAN, 1.1.2017' ,width-10,score_box-3);
 // global high score
   fill(255, 120, 150,155);
   textSize(20);
   textAlign(RIGHT,TOP);
-  text('Global Top Score: ',width-250,10);
+  text('Global Top Score: ',width-100,10);
   textAlign(LEFT,TOP);
-  text(GLobal_High_score,width-250,10);
+  text(GLobal_High_score,width-100,10);
   textAlign(RIGHT,TOP);
-  text('Saved for: ',width-250,50);
+  text('Global Best Player: ',width-100,50);
   textAlign(LEFT,TOP);
-  text(best_player,width-250,50);
+  text(best_player,width-100,50);
   
   fill(255, 0, 100);
   add = true;
