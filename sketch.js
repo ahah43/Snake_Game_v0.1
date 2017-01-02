@@ -1,5 +1,5 @@
 var s;
-var scl = 100;
+var scl = 75;
 var food = [];
 var score_box;
 var high_Score = 0;
@@ -88,16 +88,16 @@ function draw() {
   fill(255, 0, 100);
   textSize(30);
   textAlign(RIGHT,TOP);
-  text('Current Score: ',width/2,50);
+  text('Current Score: ',width/2+100,50);
   textAlign(LEFT,TOP);
-  text(s.score,width/2,50);
+  text(s.score,width/2+100,50);
   // High Score
   fill(255, 120, 150,155);
   textSize(25);
   textAlign(RIGHT,TOP);
-  text('your Top Score: ',width/2-100,10);
+  text('your Top Score: ',width/2+100,10);
   textAlign(LEFT,TOP);
-  text(high_Score,width/2-100,10);
+  text(high_Score,width/2+100,10);
   // AHMED HASSAN
   fill(0, 128, 0);
   textSize(10);
