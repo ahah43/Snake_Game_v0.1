@@ -1,5 +1,5 @@
 var s;
-var scl = 20;
+var scl = 50;
 var food = [];
 var score_box = 100;
 var high_Score = 0;
@@ -73,9 +73,6 @@ function setup() {
   
 }
 
-/*function mousePressed() {
-  s.total++;
-}*/
 
 function draw() {
   background(50);
@@ -158,13 +155,13 @@ function draw() {
 
 
 function keyPressed() {
-  if (keyCode === UP_ARROW) {
+  if (keyCode === UP_ARROW && s.yspeed != 1) {
     s.dir(0, -1);
-  } else if (keyCode === DOWN_ARROW) {
+  } else if (keyCode === DOWN_ARROW  && s.yspeed != -1) {
     s.dir(0, 1);
-  } else if (keyCode === RIGHT_ARROW) {
+  } else if (keyCode === RIGHT_ARROW && s.xspeed != -1) {
     s.dir(1, 0);
-  } else if (keyCode === LEFT_ARROW) {
+  } else if (keyCode === LEFT_ARROW && s.xspeed != 1) {
     s.dir(-1, 0);
   }else if (key === ' ') {
     //s.dir(0, 0);
