@@ -1,5 +1,5 @@
 var s;
-var scl = 50;
+var scl = 100;
 var food = [];
 var score_box;
 var high_Score = 0;
@@ -59,7 +59,8 @@ function setup() {
 	score_box = scl*floor(100/scl);
   //slider = createSlider(1,30,10);
   player = createInput('Player Name');
-  player.position(20, 60);
+  player.position(20, 40);
+  player.size(300,50);
   createCanvas(score_box + scl*floor((windowWidth-100)/scl), score_box + scl*floor((windowHeight-100)/scl));
   s = new Snake();
   frameRate(10);
@@ -87,9 +88,9 @@ function draw() {
   fill(255, 0, 100);
   textSize(30);
   textAlign(RIGHT,TOP);
-  text('Current Score: ',width/2-100,50);
+  text('Current Score: ',width/2,50);
   textAlign(LEFT,TOP);
-  text(s.score,width/2-100,50);
+  text(s.score,width/2,50);
   // High Score
   fill(255, 120, 150,155);
   textSize(25);
