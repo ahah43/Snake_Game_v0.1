@@ -19,7 +19,7 @@ function Food() {
   
  this.show = function(){
   fill(255+0*this.weight, 255-2*this.weight, 255-2*this.weight);
-  textSize(15);
+  textSize(ceil(scl*2/3));
   textAlign(CENTER,CENTER);
   text(ceil(this.weight),this.locat.x, this.locat.y);
   noFill(255, 0, 100);
