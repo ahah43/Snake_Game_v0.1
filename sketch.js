@@ -169,15 +169,15 @@ function keyPressed() {
 }
 
 
-function mousePressed() {
-	if (s.xspeed == 0 ){    // means it moves vertically 
-	  if (mouseX > s.x){
+function touchStarted() {
+	if (s.xspeed == 0  && pmouseY > score_box ){    // means it moves vertically 
+	  if (pmouseX > s.x){
 		  s.dir(1, 0); // right
 		} else { 
 		s.dir(-1, 0); // left
 		}
-	  } else {
-		  if (mouseY > s.y){
+	  } else if ( s.yspeed == 0  && pmouseY > score_box ){
+		  if (pmouseY > s.y){
 			 s.dir(0, 1);  // downword
 		  } else{
 			  
@@ -185,5 +185,5 @@ function mousePressed() {
 		  }
 		  
 	  }
-	  
+	return false;  
 }
