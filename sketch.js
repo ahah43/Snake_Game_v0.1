@@ -188,5 +188,4 @@ function touchStarted() {
 		  }
 		  
 	  }
-	return false;  
 }
