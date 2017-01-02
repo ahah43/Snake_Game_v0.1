@@ -30,18 +30,21 @@ var density = 30;
  var scores = data.val();
  var keys = Object.keys(scores);
  max_sc = 0;
- max_sc_k = 0;
+ max_sc_p = 0;
 
  for (var i = 0; i < keys.length; i++) {
     var k = keys[i];
     var Namex = scores[k].Name;
     var scorex = scores[k].Score;
 	if (scorex > max_sc){
-	GLobal_High_score = scorex;
-	best_player = Namex;
+		max_sc = scorex;
+		max_sc_p = Namex;
+	
 	
 	}
 	}
+	GLobal_High_score = scorex;
+	best_player = Namex;
  }
  
   
