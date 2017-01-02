@@ -1,5 +1,5 @@
 var s;
-var scl = 75;
+var scl = 50;
 var food = [];
 var score_box;
 var high_Score = 0;
