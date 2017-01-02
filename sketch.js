@@ -43,8 +43,8 @@ var density = 30;
 	
 	}
 	}
-	GLobal_High_score = scorex;
-	best_player = Namex;
+	GLobal_High_score = max_sc;
+	best_player = max_sc_p;
  }
  
   
