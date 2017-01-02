@@ -170,3 +170,23 @@ function keyPressed() {
     //s.dir(0, 0);
   }
 }
+
+
+function mousePressed() {
+	if (s.xspeed == 0 ){    // means it moves vertically 
+	  if (mouseX > s.x){
+		  s.dir(1, 0); // right
+		} else { 
+		s.dir(-1, 0); // left
+		}
+	  } else {
+		  if (mouseY > s.y){
+			 s.dir(0, 1);  // downword
+		  } else{
+			  
+			 s.dir(0, -1);  // upward   
+		  }
+		  
+	  }
+	  
+}
