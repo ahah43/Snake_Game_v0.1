@@ -1,12 +1,7 @@
-// Daniel Shiffman
-// http://codingrainbow.com
-// http://patreon.com/codingrainbow
-// Code for: https://youtu.be/AaGK-fj-BAM
-
 function Snake() {
   this.x = scl/2;
   this.y = score_box;
-  this.xspeed = 0;
+  this.xspeed = 1;
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
@@ -39,7 +34,7 @@ function Snake() {
 		
         this.total = 0;
         this.tail = [];
-		this.xspeed = 0;
+		this.xspeed = 1;
         this.yspeed = 0;
 		
 		if (this.score > GLobal_High_score){
