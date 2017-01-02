@@ -1,7 +1,7 @@
 var s;
 var scl = 50;
 var food = [];
-var score_box = 100;
+var score_box;
 var high_Score = 0;
 var Food_limit = 100;
 var density = 30;
@@ -22,6 +22,7 @@ var density = 30;
   var player;
  
  function gotData(data){
+	 
 	 var scorelistings = selectAll('.scorelisting');
   for (var i = 0; i < scorelistings.length; i++) {
     scorelistings[i].remove();
@@ -54,10 +55,12 @@ var density = 30;
  }
  
 function setup() {
+	noStroke();
+	score_box = scl*floor(100/scl);
   //slider = createSlider(1,30,10);
   player = createInput('Player Name');
   player.position(20, 60);
-  createCanvas(windowWidth-100, windowHeight-100);
+  createCanvas(score_box + scl*floor((windowWidth-100)/scl), score_box + scl*floor((windowHeight-100)/scl));
   s = new Snake();
   frameRate(10);
   food[0]= new Food();
@@ -169,7 +172,7 @@ function keyPressed() {
 }
 
 
-function mousePressed() {
+function touchStarted() {
 	if (s.xspeed == 0  && pmouseY > score_box ){    // means it moves vertically 
 	  if (pmouseX > s.x){
 		  s.dir(1, 0); // right
@@ -184,5 +187,6 @@ function mousePressed() {
 			 s.dir(0, -1);  // upward   
 		  }
 		  
-	  }  
+	  }
+	return false;  
 }
