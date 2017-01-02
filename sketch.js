@@ -66,7 +66,7 @@ function setup() {
   player.size(300,50);
   createCanvas(score_box + scl*floor((windowWidth-100)/scl), score_box + scl*floor((windowHeight-100)/scl));
   s = new Snake();
-  frameRate(10);
+  
   food[0]= new Food();
   food[0].show();
   //cc = createButton('Score: ',0,0);
@@ -154,7 +154,7 @@ function draw() {
   s.death();
   s.update();
   s.show();
-  
+  frameRate(10 + floor(s.score / 100));
 }
 
 
