@@ -169,7 +169,7 @@ function keyPressed() {
 }
 
 
-function touchStarted() {
+function mousePressed() {
 	if (s.xspeed == 0  && pmouseY > score_box ){    // means it moves vertically 
 	  if (pmouseX > s.x){
 		  s.dir(1, 0); // right
