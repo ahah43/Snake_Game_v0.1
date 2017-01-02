@@ -173,13 +173,13 @@ function keyPressed() {
 
 
 function mousePressed() {
-	if (s.xspeed == 0  && (pmouseY > score_box ){    // means it moves vertically 
+	if (s.xspeed == 0  && (pmouseY > score_box )){    // means it moves vertically 
 	  if (pmouseX > s.x || mouseX > s.x){
 		  s.dir(1, 0); // right
 		} else if (pmouseX < s.x || mouseX < s.x){ 
 		s.dir(-1, 0); // left
 		}
-	  } else if ( s.yspeed == 0  && pmouseY > score_box ){
+	  } else if ( s.yspeed == 0  && (pmouseY > score_box )){
 		  if (pmouseY > s.y || mouseY > s.y){
 			 s.dir(0, 1);  // downword
 		  } else if ((pmouseY < s.y || mouseY < s.y)) {
