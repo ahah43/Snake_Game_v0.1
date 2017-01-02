@@ -172,20 +172,21 @@ function keyPressed() {
 }
 
 
-function touchStarted() {
-	if (s.xspeed == 0  && pmouseY > score_box ){    // means it moves vertically 
-	  if (pmouseX > s.x){
+function mousePressed() {
+	if (s.xspeed == 0  && (pmouseY > score_box ){    // means it moves vertically 
+	  if (pmouseX > s.x || mouseX > s.x){
 		  s.dir(1, 0); // right
-		} else { 
+		} else if (pmouseX < s.x || mouseX < s.x){ 
 		s.dir(-1, 0); // left
 		}
 	  } else if ( s.yspeed == 0  && pmouseY > score_box ){
-		  if (pmouseY > s.y){
+		  if (pmouseY > s.y || mouseY > s.y){
 			 s.dir(0, 1);  // downword
-		  } else{
+		  } else if ((pmouseY < s.y || mouseY < s.y)) {
 			  
 			 s.dir(0, -1);  // upward   
 		  }
 		  
 	  }
+
 }
