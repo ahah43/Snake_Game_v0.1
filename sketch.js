@@ -184,6 +184,5 @@ function touchStarted() {
 			 s.dir(0, -1);  // upward   
 		  }
 		  
-	  }
-	return false;  
+	  }  
 }
