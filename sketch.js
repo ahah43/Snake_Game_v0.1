@@ -160,7 +160,7 @@ function draw() {
   s.death();
   s.update();
   s.show();
-  frameRate(10 + floor(s.score / 100));
+  frameRate(10 + 0.25*floor(s.score / 50));
 }
 
 
